@@ -850,10 +850,13 @@ select {
   padding: 1.25rem;
   opacity: 0;
   transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
-.project-card:hover .project-overlay {
+.project-card:hover .project-overlay,
+.project-card.touched .project-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .project-overlay p {
